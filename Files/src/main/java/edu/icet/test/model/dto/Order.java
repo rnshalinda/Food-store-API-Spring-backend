@@ -3,6 +3,7 @@ package edu.icet.test.model.dto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,14 +11,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
+@Builder
 public class Order {
 
     @Id
-    @Column(length = 6, nullable = false)
+    @Column(length = 5)
     private String orderID;
 
     @Id
-    @Column(length = 6, nullable = false)
+    @Column(length = 5)
     private String itemCode;
 
     @Column(nullable = false)

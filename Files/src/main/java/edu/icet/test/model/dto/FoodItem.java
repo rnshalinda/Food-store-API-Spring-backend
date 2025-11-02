@@ -1,8 +1,9 @@
-package edu.icet.test.model.entity;
+package edu.icet.test.model.dto;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,11 +11,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemEntity {
+@Builder
+public class FoodItem {
 
     @Id
-    @Column(length = 6, nullable = false)
-    private String code;
+    @Column(length = 5)
+    private Long code;
 
     @Column(length = 50, nullable = false)
     private String description;

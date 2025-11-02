@@ -1,7 +1,9 @@
-package edu.icet.test.model.dto;
+package edu.icet.test.model.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,21 +12,24 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Item {
+
+@Table(name = "food")
+@Entity
+public class FoodItemEntity {
 
     @Id
-    @Column(length = 6, nullable = false)
-    private String code;
+    @Column(length = 6)
+    private Long code;
 
-    @Column(length = 50, nullable = false)
+    @Column(length = 50)
     private String description;
 
-    @Column(length = 20, nullable = true)
+    @Column(length = 20)
     private String size;
 
-    @Column(precision = 10, nullable = false)
+    @Column(precision = 10)
     private double unitPrice;
 
-    @Column(nullable = false)
+    @Column(length = 10)
     private int qty;
 }
