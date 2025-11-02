@@ -1,7 +1,9 @@
 package edu.icet.test.model.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,19 +12,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
+@Table(name = "orders")
+@Entity
 public class OrderEntity {
 
     @Id
-    @Column(length = 6, nullable = false)
-    private String orderID;
+    private String OrderId;
 
-    @Id
-    @Column(length = 6, nullable = false)
-    private String itemCode;
+    private Long itemCode;
 
-    @Column(nullable = false)
-    private int orderQTY;
+    private int orderQty;
 
-    @Column(precision = 3)
     private double discount;
+
+    private double price;
 }

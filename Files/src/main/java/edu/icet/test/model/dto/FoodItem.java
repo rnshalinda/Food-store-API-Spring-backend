@@ -5,21 +5,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Builder
-public class Order {
+public class FoodItem {
 
-    private String OrderId;
+    private Long code;
 
-    private Long itemCode;
+    private String description;
 
-    private int orderQty;
+    private double unitPrice;
 
-    private double discount;
+    private String size;
 
-    private double price;
-
+    private int qty;
 }
