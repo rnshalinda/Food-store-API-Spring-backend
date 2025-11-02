@@ -18,18 +18,13 @@ import lombok.NoArgsConstructor;
 public class FoodItemEntity {
 
     @Id
-    @Column(length = 6)
     private Long code;
 
-    @Column(length = 50)
     private String description;
 
-    @Column(length = 20)
-    private String size;
-
-    @Column(precision = 10)
     private double unitPrice;
 
-    @Column(length = 10)
+    private String size;
+
     private int qty;
 }

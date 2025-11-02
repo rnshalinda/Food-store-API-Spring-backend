@@ -17,15 +17,13 @@ import lombok.NoArgsConstructor;
 public class OrderEntity {
 
     @Id
-    @Column(length = 5)
-    private String orderID;
+    private String OrderId;
 
-    @Column(length = 6)
-    private String itemCode;
+    private Long itemCode;
 
-    @Column(nullable = false)
-    private int orderQTY;
+    private int orderQty;
 
-    @Column(precision = 3)
     private double discount;
+
+    private double price;
 }

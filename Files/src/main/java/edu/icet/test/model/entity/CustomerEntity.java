@@ -18,16 +18,14 @@ import lombok.NoArgsConstructor;
 public class CustomerEntity {
 
     @Id
-    @Column(length = 5)
     private String id;
 
-    @Column(length = 10)
     private String name ;
 
-    @Column(length = 10)
     private Integer phone;
 
     private String email;
+
 
 
 }
