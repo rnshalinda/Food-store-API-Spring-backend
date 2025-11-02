@@ -1,9 +1,7 @@
 package edu.icet.test.controller;
 
 import edu.icet.test.model.dto.Customer;
-import edu.icet.test.model.dto.FoodItem;
 import edu.icet.test.service.impl.CustomerService;
-import edu.icet.test.service.impl.FoodItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
